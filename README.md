@@ -1,0 +1,23 @@
+# Kubernetes Credentials Plugin
+
+[![build-status](https://ci.jenkins.io/buildStatus/icon?job=Plugins/kubernetes-credentials-plugin/master/)][master-build]
+
+Contains classes shared between the [Kubernetes Plugin][kubernetes-plugin] and the
+[Kubernetes CLI Plugin][kubernetes-cli-plugin].
+
+
+## Building and Testing
+To build the extension, run:
+```bash
+mvn clean package
+```
+and upload `target/kubernetes-credentials.hpi` to your Jenkins installation.
+
+To run the tests:
+```bash
+mvn clean test
+```
+
+[kubernetes-plugin]:https://github.com/jenkinsci/kubernetes-plugin
+[kubernetes-cli-plugin]:https://github.com/jenkinsci/kubernetes-cli-plugin
+[master-build]: https://ci.jenkins.io/job/Plugins/job/kubernetes-credentials-plugin/job/master/
