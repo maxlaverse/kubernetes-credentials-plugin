@@ -3,8 +3,11 @@
 [![build-status](https://ci.jenkins.io/buildStatus/icon?job=Plugins/kubernetes-credentials-plugin/master/)][master-build]
 
 Contains classes shared between the [Kubernetes Plugin][kubernetes-plugin] and the
-[Kubernetes CLI Plugin][kubernetes-cli-plugin].
+[Kubernetes CLI Plugin][kubernetes-cli-plugin]:
+* an OpenShift username/password credentials that can fetch a valid Kubernetes token when needed
+* an OpenShift secret credentials, which is meant to hold a Kubernetes token
 
+Those credentials are available through the UI and in pipelines.
 
 ## Building and Testing
 To build the extension, run:
