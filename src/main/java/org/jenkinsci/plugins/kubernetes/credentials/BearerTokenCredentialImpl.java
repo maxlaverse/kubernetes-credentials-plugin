@@ -43,14 +43,14 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * @author <a href="mailto:nicolas.deloof@gmail.com">Nicolas De Loof</a>
  */
-public class OpenShiftBearerTokenCredentialImpl extends UsernamePasswordCredentialsImpl implements TokenProducer {
+public class BearerTokenCredentialImpl extends UsernamePasswordCredentialsImpl implements TokenProducer {
 
     private static final long serialVersionUID = 6031616605797622926L;
 
     private transient AtomicReference<Token> token = new AtomicReference<Token>();
 
     @DataBoundConstructor
-    public OpenShiftBearerTokenCredentialImpl(CredentialsScope scope, String id, String description, String username, String password) {
+    public BearerTokenCredentialImpl(CredentialsScope scope, String id, String description, String username, String password) {
         super(scope, id, description, username, password);
     }
 
@@ -143,7 +143,7 @@ public class OpenShiftBearerTokenCredentialImpl extends UsernamePasswordCredenti
 
         @Override
         public String getDisplayName() {
-            return "OpenShift Username and Password";
+            return "Kubernetes Username and Password";
         }
     }
 
